@@ -1,0 +1,124 @@
+a {
+	color: #333;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1 {
+	letter-spacing: -2px;
+	font-size: 1.6em;
+	font-weight: 400;
+}
+body {
+	background: #e7edee;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	margin-bottom: 100px;
+}
+
+.container {
+	width: 700px;
+	max-width: 90%;
+	margin: 10px auto;
+	padding: 10px 0;
+	background: white;
+	border: 2px solid #dbdbdb;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.upload input {
+	display: none;
+}
+
+.pure-button {
+	margin: 5px 0;
+}
+
+#pdf {
+	display: none;
+}
+
+#file {
+	cursor: pointer;
+}
+
+.file {
+	margin-bottom: .5rem;
+	max-width: 90%;
+	width: 8rem;
+}
+
+.preview {
+	overflow: hidden;
+	display: none;
+	margin-bottom: .5rem;
+	width: 90%;
+	height: auto;
+	-moz-box-shadow: 0px 0px 10px 0px #909090;
+	-webkit-box-shadow: 0px 0px 10px 0px #909090;
+	-o-box-shadow: 0px 0px 10px 0px #909090;
+	box-shadow: 0px 0px 10px 0px #909090;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090, Direction=NaN, Strength=10);
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.status {
+	display: none;
+	padding: 5px;
+	background: #f47063;
+	width: 100%;
+	color: white;
+	margin: 8px 0;
+}
+
+.progress {
+	display: none;
+	position: relative;
+	margin: 10px auto;
+	padding: 5px;
+	width: 90%;
+	height: 2rem;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+.bar {
+	background: #008de6;
+	height: 20px;
+	width: 0%;
+	-webkit-transition: width .3s;
+	-moz-transition: width .3s;
+	transition: width .3s;
+
+}
+.percent {
+	display: inline-block;
+	position: absolute;
+	top: 6px;
+	left: 48%;
+	color: #333;
+}
+
+#modal > .modal-dialog {
+	max-width: 90%;
+	width: 30rem;
+}
+
+#modal .modal-header {
+	padding: 10px 15px;
+	font-size: 1.2rem;
+}
+
+#modal .modal-footer {
+	padding: 4px 15px;
+}
+
+#print2code {
+	margin-bottom: .5rem;
+	font-size: 3rem;
+}

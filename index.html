@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<title>Print2Net</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/pure.css" />
+		<link rel="stylesheet" type="text/css" href="css/rmodal.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript">
+			function select_file()
+			{
+				document.getElementById( 'image' ).click();
+				return ( false );
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<h1 style="letter-spacing: 1px;">
+				<a href="#">Print2Net</a>
+				<br /><span style="font-size: 1rem;">Imprimer sans efforts ...</span>
+			</h1>
+
+			<form class="pure-form" action="upload.php" enctype="multipart/form-data" method="post">
+				<div>
+					<img src="" class="preview" />
+					<img src="images/file-icon.png" id="file" class="file" onclick="select_file()" />
+					<img src="images/pdf-icon.png" id="pdf" class="file" />
+				</div>
+
+				<div class="upload" style="display: inline-block;">
+					<a onclick="select_file()" class="pure-button">Choisir une Image</a>
+					<input id="image" type="file" name="image" >
+				</div>
+
+				<input class="pure-button pure-button-primary" type="submit" value="Envoyer!">
+			</form>
+
+			<div class="status"></div>
+			<div class="progress">
+				<div class="bar"></div>
+				<div class="percent">0%</div>
+			</div>
+
+			<div style="font-style: italic; font-size: .7rem;">extensions autorisées : gif, jpeg, jpg, png, pdf - envoi limité à 2 Mo</div>
+		</div>
+
+		<div id="modal" class="modal">
+			<div class="modal-dialog animated">
+				<div class="modal-content">
+					<form class="form-horizontal" method="get">
+						<div class="modal-header">
+							<strong>Code d'Impression</strong>
+						</div>
+
+						<div class="modal-body text-center">
+							<div id="print2code">39424286</div>
+							Ce code est à redonner à l'imprimeur lors de votre passage...
+							<br />Valable pour une durée de 24h
+						</div>
+
+						<div class="modal-footer">
+							<button class="pure-button pure-button-default" type="button" onclick="modal.close(); setTimeout( function () { window.location.reload(); }, 1000 );">Fermer</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="text-center" style="font-size: .7rem;">
+			Talha TAXIPHONE - ?? rue de Paris - 92110 Clichy
+			<br />ouvert de 8h30 à 22h du lundi au samedi
+		</div>
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.form.min.js"></script>
+		<script type="text/javascript" src="js/rmodal.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
